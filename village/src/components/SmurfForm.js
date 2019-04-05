@@ -27,7 +27,7 @@ class SmurfForm extends Component {
     axios
       .post("http://localhost:3333/smurfs", { name, age, height })
       .then(response => {
-        this.props.fetchSmurfs();
+        this.props.getSmurf();
         this.props.history.push("/");
       })
       .catch(err => console.log(err));
